@@ -14,6 +14,14 @@ namespace BarcodeScanApp.ViewModels
         {
             await Navigation.PushAsync(new ZXingPage());
         });
-     }
+
+        public Command BtnMLKitCommand => new Command(async () =>
+        {
+            bool allowed = false;
+            allowed = await BarcodeScanner.Mobile.XamarinForms.Methods.AskForRequiredPermission();
+            if (allowed)
+                await Navigation.PushModalAsync(new NavigationPage(new MLKitPage()));
+        });
+    }
 }
 

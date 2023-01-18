@@ -13,7 +13,7 @@
             <Label Text="Barcode Scanning Test" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
         <Button x:Name="btnZXing" Text="ZXing.Mobile.Net" HorizontalOptions="CenterAndExpand" Margin="25" Command="{Binding BtnZXingCommand}" />
-        <Button x:Name="btnMLKit" Text="Xamarin.Google.MLKit" HorizontalOptions="CenterAndExpand" Margin="25" />
+        <Button x:Name="btnMLKit" Text="Xamarin.Google.MLKit" HorizontalOptions="CenterAndExpand" Margin="25" Command="{Binding BtnMLKitCommand}" />
     </StackLayout>
     </ContentPage.Content>
 </ContentPage>
