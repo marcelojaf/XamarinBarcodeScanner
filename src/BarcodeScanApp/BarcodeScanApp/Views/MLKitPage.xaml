@@ -3,10 +3,12 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="BarcodeScanApp.Views.MLKitPage"
-    Title="MLKit Scanning">
+    Title="MLKit Scanning"
+    BackgroundColor="White">
     <ContentPage.Content>
-        <StackLayout>
-            <Button Text="Scan"></Button>
+        <StackLayout Orientation="Vertical" Margin="20">
+            <Button x:Name="btnScan" Text="Scan" BackgroundColor="DarkGreen" TextColor="White" Margin="10"></Button>
+            <Editor x:Name="txtScannedContent" Placeholder="Scanned text" PlaceholderColor="Gray" IsReadOnly="True" BackgroundColor="White" TextColor="Black" Margin="25"></Editor>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
